@@ -5,15 +5,14 @@ import NavBar from "../Components/NavBar";
 import Noisebackground from "../Components/Noisebackground";
 import WorkSection from "../Components/WorkSection";
 
-// import Intro from '../Components/Intro'
-// import intro from '../styles/Intro.module.css'
+import Intro from "../Components/Intro";
 
 const Home: NextPage = () => {
   return (
     <div className=" min-h-screen w-screen pt-36">
-      <Noisebackground />
-      <NavBar />
-      {/* <Intro/>  */}
+      {/* <Noisebackground /> */}
+      {/* <NavBar /> */}
+      <Intro />
       {/* <IntroText />
       <AboutSection />
       <WorkSection /> */}
