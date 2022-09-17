@@ -1,7 +1,7 @@
 import React from "react";
 import style from "../styles/Noisebackground.module.css";
 
-const Noisebackground = () => {
+const Noisebackground: React.FC = () => {
   return (
     <div className={style.Noise}>
       <svg>

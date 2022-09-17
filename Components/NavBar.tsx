@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import style from "../styles/NavBar.module.css";
 
-const NavBar = () => {
+const NavBar: React.FC = () => {
   const [isActive, setisActive] = useState([false]);
   let navigationState: boolean[] = [false, false, false, false, false];
   const NavBarItems: string[] = ["About", "Work", "Skills", "Contact", "Blog"];

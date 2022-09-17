@@ -3,7 +3,7 @@ import useTextTyping from "../hooks/useTextTyping";
 import style from "../styles/AboutSection.module.css";
 import CODTextEffect from "./CODTextEffect";
 
-const AboutSection = () => {
+const AboutSection: React.FC = () => {
   const Transition1: string = "Mhdqp vq";
   const Transition2: string = "Kjrsw th";
   const Transition3: string = "About me";

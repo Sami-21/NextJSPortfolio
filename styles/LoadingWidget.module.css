@@ -1,0 +1,94 @@
+.component_container {
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.loading_dots:nth-child(1) {
+  animation: first-dot-animation 1.33s infinite;
+}
+.loading_dots:nth-child(2) {
+  animation: second-dot-animation 1.33s infinite 0.33s;
+}
+.loading_dots:nth-child(3) {
+  animation: third-dot-animation 1.33s infinite 0.66s;
+}
+
+@media (min-width: 1200px) {
+  .outer_rectangle {
+    width: 1150px;
+    height: 175px;
+    display: flex;
+    gap: 20px;
+    border: 2px solid #fff;
+    padding: 20px;
+  }
+  .inner_squares {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bit_off {
+    font-size: 120px;
+    color: gray;
+  }
+  .bit_on {
+    position: relative;
+    font-size: 120px;
+    color: #48ff50 !important;
+  }
+  .bit_on::after {
+    content: "1";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #48ff50;
+    filter: blur(10px);
+    font-size: 120px;
+  }
+  .loading_label {
+    text-align: center;
+    font-size: 120px;
+    color: white;
+  }
+}
+
+@keyframes first-dot-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes second-dot-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes third-dot-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import useTextTyping from "../hooks/useTextTyping";
 import style from "../styles/IntroText.module.css";
 
-const IntroText = () => {
+const IntroText: React.FC = () => {
   let Transition1: string = "Ps: A wx Mvqk$ BctrKzsgf Huljhezsw";
   let Transition2: string = "Ma! Q fd Xifv_ UnrsZlomz Pvftkqabk";
   let Transition3: string = `Hi, I am Sami, FullStack Developer`;

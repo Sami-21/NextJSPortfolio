@@ -13,4 +13,5 @@
   background-size: 2px 2px;
   filter: url(#noise);
   opacity: 1;
+  /* z-index: -10; */
 }

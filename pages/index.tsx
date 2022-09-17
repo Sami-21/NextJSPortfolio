@@ -6,13 +6,15 @@ import Noisebackground from "../Components/Noisebackground";
 import WorkSection from "../Components/WorkSection";
 
 import Intro from "../Components/Intro";
+import LoadingWidget from "../Components/LoadingWidget";
 
 const Home: NextPage = () => {
   return (
-    <div className=" min-h-screen w-screen pt-36">
+    <div className=" min-h-screen w-screen">
+      <LoadingWidget />
       {/* <Noisebackground /> */}
       {/* <NavBar /> */}
-      <Intro />
+      {/* <Intro /> */}
       {/* <IntroText />
       <AboutSection />
       <WorkSection /> */}
