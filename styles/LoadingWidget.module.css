@@ -6,6 +6,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* opacity: 0;
+  animation: widget-fade-in 0.1s linear 1s forwards; */
 }
 .loading_dots:nth-child(1) {
   animation: first-dot-animation 1.33s infinite;
@@ -86,6 +88,14 @@
     opacity: 0;
   }
   50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes widget-fade-in {
+  0% {
     opacity: 0;
   }
   100% {

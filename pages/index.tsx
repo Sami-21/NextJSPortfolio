@@ -11,10 +11,10 @@ import LoadingWidget from "../Components/LoadingWidget";
 const Home: NextPage = () => {
   return (
     <div className=" min-h-screen w-screen">
-      <LoadingWidget />
-      {/* <Noisebackground /> */}
+      <Intro destroyDelay={500} />
+      <LoadingWidget showCompDelay={500} />
+      <Noisebackground showCompDelay={500} />
       {/* <NavBar /> */}
-      {/* <Intro /> */}
       {/* <IntroText />
       <AboutSection />
       <WorkSection /> */}

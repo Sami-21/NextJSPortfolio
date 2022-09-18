@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { unmountComponentAtNode } from "react-dom";
-import { clearInterval } from "timers";
 import style from "../styles/LoadingWidget.module.css";
 
 const LoadingWidget: React.FC = () => {
