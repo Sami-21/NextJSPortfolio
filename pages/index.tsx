@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   return (
     <div className=" min-h-screen w-screen">
       <Intro destroyDelay={500} />
-      <LoadingWidget showCompDelay={500} />
+      <LoadingWidget />
       <Noisebackground showCompDelay={500} />
       {/* <NavBar /> */}
       {/* <IntroText />

@@ -14,43 +14,87 @@ const LoadingWidget: React.FC = () => {
   let onBits: singleBit[] = new Array(0);
 
   const [byte, setByte] = useState([...onBits, ...offBits]);
+  const [isShown, setIsShown] = useState(true);
 
   useEffect(() => {
+    let timer: NodeJS.Timer;
     for (let i: number = 1; i < 5; i++) {
-      setTimeout(() => {
+      timer = setTimeout(() => {
         onBits.push(onBit);
         offBits.pop();
         setByte([...onBits, ...offBits]);
       }, i * Math.random() * 1500 + 2500);
+      if (i === 4) {
+        setTimeout(() => {
+          setIsShown(false);
+        }, i * 1500 + 2500);
+      }
     }
-    if (
-      byte.filter((bit) => {
-        return bit === offBit;
-      }).length == 0
-    ) {
-    }
+    return () => {};
   }, []);
-  return (
+  return isShown ? (
     <div className={style.component_container}>
       <style jsx>
         {`
-          .bit_off {
-            font-size: 120px;
-            color: gray;
+          @media (min-width: 1200px) {
+            .bit_off {
+              font-size: 120px;
+              color: gray;
+            }
+            .bit_on {
+              position: relative;
+              font-size: 120px;
+              color: #48ff50 !important;
+            }
+            .bit_on::after {
+              content: "1";
+              position: absolute;
+              top: 0;
+              left: 0;
+              color: #48ff50;
+              filter: blur(10px);
+              font-size: 120px;
+            }
           }
-          .bit_on {
-            position: relative;
-            font-size: 120px;
-            color: #48ff50 !important;
+          @media (min-width: 768px) {
+            .bit_off {
+              font-size: 72px;
+              color: gray;
+            }
+            .bit_on {
+              position: relative;
+              font-size: 72px;
+              color: #48ff50 !important;
+            }
+            .bit_on::after {
+              content: "1";
+              position: absolute;
+              top: 0;
+              left: 0;
+              color: #48ff50;
+              filter: blur(10px);
+              font-size: 72px;
+            }
           }
-          .bit_on::after {
-            content: "1";
-            position: absolute;
-            top: 0;
-            left: 0;
-            color: #48ff50;
-            filter: blur(10px);
-            font-size: 120px;
+          @media (max-width: 767px) {
+            .bit_off {
+              font-size: 42px;
+              color: gray;
+            }
+            .bit_on {
+              position: relative;
+              font-size: 42px;
+              color: #48ff50 !important;
+            }
+            .bit_on::after {
+              content: "1";
+              position: absolute;
+              top: 0;
+              left: 0;
+              color: #48ff50;
+              filter: blur(10px);
+              font-size: 42px;
+            }
           }
         `}
       </style>
@@ -70,7 +114,7 @@ const LoadingWidget: React.FC = () => {
         </span>
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default LoadingWidget;

@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import intro from "../styles/Intro.module.css";
 
-const Intro: React.FC = ({ destroyDelay }: any) => {
+interface destroyDelayProps {
+  destroyDelay: number;
+}
+const Intro: React.FC<destroyDelayProps> = ({ destroyDelay }) => {
   const [isShown, setIsShown] = useState(true);
   useEffect(() => {
     const timer: NodeJS.Timer = setTimeout(() => {
