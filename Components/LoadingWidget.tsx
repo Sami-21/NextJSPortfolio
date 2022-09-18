@@ -56,7 +56,7 @@ const LoadingWidget: React.FC = () => {
               font-size: 120px;
             }
           }
-          @media (min-width: 768px) {
+          @media (max-width: 1199px) {
             .bit_off {
               font-size: 72px;
               color: gray;

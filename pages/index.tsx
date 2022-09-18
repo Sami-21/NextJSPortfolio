@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       <Intro destroyDelay={500} />
       <LoadingWidget />
       <Noisebackground showCompDelay={500} />
-      {/* <NavBar /> */}
+      <NavBar />
       {/* <IntroText />
       <AboutSection />
       <WorkSection /> */}
