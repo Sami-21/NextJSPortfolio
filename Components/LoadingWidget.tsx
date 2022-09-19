@@ -100,7 +100,7 @@ const LoadingWidget: React.FC = () => {
         `}
       </style>
       <div className={style.outer_rectangle}>
-        {byte.map((bit, index) => (
+        {byte.map((bit: singleBit, index: number) => (
           <div className={style.inner_squares} key={index}>
             <span className={bit.style}>{bit.value}</span>
           </div>

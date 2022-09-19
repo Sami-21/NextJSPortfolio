@@ -66,29 +66,37 @@
 @keyframes fade-in-out {
   0% {
     opacity: 0;
+    display: none;
   }
   45% {
     opacity: 1;
+    display: block;
   }
   55% {
     opacity: 1;
+    display: block;
   }
   100% {
     opacity: 0;
+    display: none;
   }
 }
 
 @keyframes fade-in {
   0% {
     opacity: 0;
+    display: none;
   }
   45% {
     opacity: 1;
+    display: block;
   }
   55% {
     opacity: 1;
+    display: block;
   }
   100% {
     opacity: 1;
+    display: block;
   }
 }

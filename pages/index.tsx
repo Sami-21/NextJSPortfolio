@@ -9,7 +9,6 @@ import WorkSection from "../Components/WorkSection";
 
 import Intro from "../Components/Intro";
 import LoadingWidget from "../Components/LoadingWidget";
-import TransitionOnes from "../Components/TransitionOnes";
 
 const Home: NextPage = () => {
   return (
@@ -27,10 +26,9 @@ const Home: NextPage = () => {
       </Head>
       <div className=" min-h-screen w-screen">
         {/* <Intro destroyDelay={500} />
-        <LoadingWidget />
-        <Noisebackground showCompDelay={500} /> */}
-        <TransitionOnes />
-        {/* <NavBar showCompDelay={5000} /> */}
+        <LoadingWidget /> */}
+        <Noisebackground showCompDelay={0} />
+        <NavBar showCompDelay={0} />
         {/* <IntroText />
       <AboutSection />
       <WorkSection /> */}

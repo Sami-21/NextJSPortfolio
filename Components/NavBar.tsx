@@ -6,7 +6,7 @@ interface showCompDelayProps {
 }
 
 const NavBar: React.FC<showCompDelayProps> = ({ showCompDelay }) => {
-  const [isActive, setisActive] = useState([false]);
+  const [isActive, setIsActive] = useState([false, false, false, false, false]);
   const [isShown, setIsShown] = useState(false);
 
   useEffect(() => {
@@ -19,7 +19,14 @@ const NavBar: React.FC<showCompDelayProps> = ({ showCompDelay }) => {
   }, [showCompDelay, isShown]);
 
   let navigationState: boolean[] = [false, false, false, false, false];
-  const NavBarItems: string[] = ["About", "Work", "Skills", "Contact", "Blog"];
+  const logoItems: string[] = ["9", "M", "S"];
+  const NavBarItems: string[][] = [
+    ["99999", "codmw", "About"],
+    ["9999", "rekt", "Work"],
+    ["999999", "bf2042", "Skills"],
+    ["9999999", "madness", "Contact"],
+    ["9999", "doom", "Blog"],
+  ];
 
   const NavBarHandler = (index: number) => {
     let previousActiveIndex = navigationState.findIndex((el) => {
@@ -27,20 +34,23 @@ const NavBar: React.FC<showCompDelayProps> = ({ showCompDelay }) => {
     });
     navigationState[previousActiveIndex] = false;
     navigationState[index] = true;
-    setisActive(navigationState);
+    setIsActive(navigationState);
   };
 
   return isShown ? (
     <nav className={style.NavBar}>
       <div
-        onClick={() => setisActive([false, false, false, false, false])}
+        onClick={() => setIsActive([false, false, false, false, false])}
         className={style.logo}
       >
-        <span className={style.text}>S</span>
-        <span className={style.blur}>S</span>
+        {logoItems.map((char: string, index: number) => (
+          <span className={style.text} data-before={char} key={index}>
+            {char}
+          </span>
+        ))}
       </div>
       <ul className={style.NavBarItemsContainer}>
-        {NavBarItems.map((el: string, index: number) => {
+        {NavBarItems.map((el: string[], index: number) => {
           return (
             <li
               className="cursor-pointer"
@@ -53,9 +63,9 @@ const NavBar: React.FC<showCompDelayProps> = ({ showCompDelay }) => {
                     ? `${style.ActiveItem} ${style.NavBarItem}`
                     : `${style.NavBarItem}`
                 }
-                data-before={el.toUpperCase()}
+                data-before={el[3].toUpperCase()}
               >
-                {el.toUpperCase()}
+                {el[3].toUpperCase()}
               </span>
             </li>
           );

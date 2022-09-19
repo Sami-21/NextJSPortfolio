@@ -20,7 +20,7 @@ const IntroText: React.FC = () => {
         <span className={`${style.FirstTextTransition}`}>
           {TextState1.split("")
             .slice(0, 3)
-            .map((char, index) => {
+            .map((char: string, index: number) => {
               return (
                 <span key={index} className={style.Disappeared1}>
                   {char}
@@ -30,7 +30,7 @@ const IntroText: React.FC = () => {
           <br />
           {TextState1.split("")
             .slice(3, 14)
-            .map((char, index) => {
+            .map((char: string, index: number) => {
               return (
                 <span key={index} className={style.Disappeared1}>
                   {char}
@@ -40,7 +40,7 @@ const IntroText: React.FC = () => {
           <br />
           {TextState1.split("")
             .slice(14)
-            .map((char, index) => {
+            .map((char: string, index: number) => {
               return (
                 <span key={index} className={style.Disappeared1}>
                   {char}
@@ -54,7 +54,7 @@ const IntroText: React.FC = () => {
         <span className={`${style.SecondTextTransition}  `}>
           {TextState2.split("")
             .slice(0, 3)
-            .map((char, index) => (
+            .map((char: string, index: number) => (
               <span key={index} className={` ${style.Disappeared2}`}>
                 {char}
               </span>
@@ -62,7 +62,7 @@ const IntroText: React.FC = () => {
           <br />
           {TextState2.split("")
             .slice(3, 14)
-            .map((char, index) => (
+            .map((char: string, index: number) => (
               <span key={index} className={` ${style.Disappeared2}`}>
                 {char}
               </span>
@@ -70,7 +70,7 @@ const IntroText: React.FC = () => {
           <br />
           {TextState2.split("")
             .slice(14)
-            .map((char, index) => (
+            .map((char: string, index: number) => (
               <span key={index} className={` ${style.Disappeared2}`}>
                 {char}
               </span>
@@ -82,7 +82,7 @@ const IntroText: React.FC = () => {
         <span className={style.ThirdTextTransition}>
           {TextState3.split("")
             .slice(0, 3)
-            .map((char, index) => (
+            .map((char: string, index: number) => (
               <span className={`${style.Showed}  `} key={index}>
                 {char}
               </span>
@@ -90,7 +90,7 @@ const IntroText: React.FC = () => {
           <br />
           {TextState3.split("")
             .slice(3, 14)
-            .map((char, index) => (
+            .map((char: string, index: number) => (
               <span className={`${style.Showed}  `} key={index}>
                 {char}
               </span>
@@ -98,7 +98,7 @@ const IntroText: React.FC = () => {
           <br />
           {TextState3.split("")
             .slice(14)
-            .map((char, index) => (
+            .map((char: string, index: number) => (
               <span className={`${style.Showed}  `} key={index}>
                 {char}
               </span>
@@ -107,7 +107,7 @@ const IntroText: React.FC = () => {
         <span className={style.IntroTextBlur}>
           {TextState3.split("")
             .slice(0, 3)
-            .map((char, index) => (
+            .map((char: string, index: number) => (
               <span className={`${style.Showed}`} key={index}>
                 {char}
               </span>
@@ -115,7 +115,7 @@ const IntroText: React.FC = () => {
           <br />
           {TextState3.split("")
             .slice(3, 14)
-            .map((char, index) => (
+            .map((char: string, index: number) => (
               <span className={`${style.Showed}`} key={index}>
                 {char}
               </span>
@@ -123,7 +123,7 @@ const IntroText: React.FC = () => {
           <br />
           {TextState3.split("")
             .slice(14)
-            .map((char, index) => (
+            .map((char: string, index: number) => (
               <span className={`${style.Showed}`} key={index}>
                 {char}
               </span>
