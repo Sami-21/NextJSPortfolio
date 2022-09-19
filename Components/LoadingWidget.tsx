@@ -17,20 +17,21 @@ const LoadingWidget: React.FC = () => {
   const [isShown, setIsShown] = useState(true);
 
   useEffect(() => {
-    let timer: NodeJS.Timer;
-    for (let i: number = 1; i < 5; i++) {
-      timer = setTimeout(() => {
-        onBits.push(onBit);
-        offBits.pop();
-        setByte([...onBits, ...offBits]);
-      }, i * Math.random() * 1500 + 2500);
-      if (i === 4) {
-        setTimeout(() => {
-          setIsShown(false);
-        }, i * 1500 + 2500);
+    return () => {
+      let timer: NodeJS.Timer;
+      for (let i: number = 1; i < 9; i++) {
+        timer = setTimeout(() => {
+          onBits.push(onBit);
+          offBits.pop();
+          setByte([...onBits, ...offBits]);
+        }, i * 500);
+        if (i === 8) {
+          setTimeout(() => {
+            setIsShown(false);
+          }, i * 500 + 1000);
+        }
       }
-    }
-    return () => {};
+    };
   }, []);
   return isShown ? (
     <div className={style.component_container}>

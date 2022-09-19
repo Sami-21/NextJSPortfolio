@@ -9,8 +9,10 @@
   align-items: center;
   color: #ffffff;
   background-color: #00090a;
+  opacity: 0;
   z-index: 100;
   padding: 0 100px;
+  animation: fade-in 0.25s ease-in 0.1s forwards;
 }
 
 .logo {
@@ -97,4 +99,13 @@
   color: #48ff50;
   filter: blur(5px);
   z-index: -1;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -1,10 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "../styles/NavBar.module.css";
 
-const NavBar: React.FC = () => {
+interface showCompDelayProps {
+  showCompDelay: number;
+}
+
+const NavBar: React.FC<showCompDelayProps> = ({ showCompDelay }) => {
   const [isActive, setisActive] = useState([false]);
+  const [isShown, setIsShown] = useState(false);
+
+  useEffect(() => {
+    const timer: NodeJS.Timer = setTimeout(() => {
+      setIsShown(true);
+    }, showCompDelay);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [showCompDelay, isShown]);
+
   let navigationState: boolean[] = [false, false, false, false, false];
   const NavBarItems: string[] = ["About", "Work", "Skills", "Contact", "Blog"];
+
   const NavBarHandler = (index: number) => {
     let previousActiveIndex = navigationState.findIndex((el) => {
       return el === true;
@@ -13,7 +29,8 @@ const NavBar: React.FC = () => {
     navigationState[index] = true;
     setisActive(navigationState);
   };
-  return (
+
+  return isShown ? (
     <nav className={style.NavBar}>
       <div
         onClick={() => setisActive([false, false, false, false, false])}
@@ -50,7 +67,7 @@ const NavBar: React.FC = () => {
         <span className={style.line}></span>
       </div>
     </nav>
-  );
+  ) : null;
 };
 
 export default NavBar;
