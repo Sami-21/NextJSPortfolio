@@ -24,7 +24,7 @@ const Home: NextPage = () => {
         <meta name="author" content="Sami Maachi" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <div className=" min-h-screen w-screen">
+      <div className=" min-h-screen max-w-screen">
         {/* <Intro destroyDelay={500} />
         <LoadingWidget /> */}
         <Noisebackground showCompDelay={0} />

@@ -8,6 +8,7 @@ interface showCompDelayProps {
 const NavBar: React.FC<showCompDelayProps> = ({ showCompDelay }) => {
   const [isActive, setIsActive] = useState([false, false, false, false, false]);
   const [isShown, setIsShown] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const timer: NodeJS.Timer = setTimeout(() => {
@@ -37,6 +38,11 @@ const NavBar: React.FC<showCompDelayProps> = ({ showCompDelay }) => {
     setIsActive(navigationState);
   };
 
+  const toggleMenu = (): any => {
+    setIsMenuOpen(!isMenuOpen);
+    console.log(isMenuOpen);
+  };
+
   return isShown ? (
     <nav className={style.NavBar}>
       <div
@@ -49,29 +55,50 @@ const NavBar: React.FC<showCompDelayProps> = ({ showCompDelay }) => {
           </span>
         ))}
       </div>
-      <ul className={style.NavBarItemsContainer}>
-        {NavBarItems.map((el: string[], index: number) => {
+      <ul
+        className={
+          isMenuOpen
+            ? `${style.NavBarItemsContainer} ${style.shown}`
+            : `${style.NavBarItemsContainer}`
+        }
+      >
+        {NavBarItems.map((el: string[], i: number) => {
           return (
             <li
-              className="cursor-pointer"
-              onClick={() => NavBarHandler(index)}
-              key={index}
+              className="cursor-pointer relative"
+              onClick={() => {
+                NavBarHandler(i);
+                setTimeout(() => {
+                  toggleMenu();
+                }, 250);
+              }}
+              key={i}
             >
-              <span
-                className={
-                  isActive[index]
-                    ? `${style.ActiveItem} ${style.NavBarItem}`
-                    : `${style.NavBarItem}`
-                }
-                data-before={el[3].toUpperCase()}
-              >
-                {el[3].toUpperCase()}
-              </span>
+              {el.map((item: string, index: number) => (
+                <span
+                  key={index}
+                  className={
+                    isActive[i]
+                      ? `${style.ActiveItem} ${style.NavBarItem}`
+                      : `${style.NavBarItem}`
+                  }
+                  data-before={item.toUpperCase()}
+                >
+                  <span className={style.item}>{item.toUpperCase()}</span>
+                </span>
+              ))}
             </li>
           );
         })}
       </ul>
-      <div className={style.burgerMenu}>
+      <div
+        onClick={toggleMenu}
+        className={
+          isMenuOpen
+            ? `${style.burgerMenu} ${style.close}`
+            : `${style.burgerMenu}`
+        }
+      >
         <span className={style.line}></span>
         <span className={style.line}></span>
         <span className={style.line}></span>
