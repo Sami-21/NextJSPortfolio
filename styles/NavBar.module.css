@@ -12,7 +12,7 @@
   background-color: #00090a;
   opacity: 0;
   z-index: 100;
-  padding: 0 100px;
+  padding: 0 50px;
   animation: fade-in 0.25s ease-in 0.1s forwards;
 }
 
@@ -59,6 +59,7 @@
 
 /* Navigation Items List Container */
 .NavBarItemsContainer {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -66,7 +67,9 @@
   height: 150px;
   font-size: 64px;
 }
-
+.NavBarItemsContainer li{
+  max-width:50px;
+}
 .burgerMenu {
   display: none;
 }
@@ -165,8 +168,8 @@
 }
 .item {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 0 ;
+  left: 0 ;
   transform: translate(-100%, -50%);
 }
 

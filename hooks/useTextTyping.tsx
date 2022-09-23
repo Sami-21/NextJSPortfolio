@@ -6,44 +6,50 @@ enum Phase {
   Deleting,
 }
 
-const useTextTyping = (TargetText: string, TypeSpeed: number) => {
-  const [phase, setphase] = useState(Phase.Typing);
+const useTextTyping = (targetText: string, typeSpeed: number , inView:boolean) => {
+  const [phase, setPhase] = useState(Phase.Typing);
   const [Text, setText] = useState(``);
   useEffect(() => {
+    if(inView){
+      setPhase(Phase.Typing);
+    }
+    else{
+      setPhase(Phase.Deleting);
+    }
     switch (phase) {
       case Phase.Typing: {
-        const NewText = TargetText.slice(0, Text.length + 1);
+        const newText = targetText.slice(0, Text.length + 1);
 
-        if (NewText === TargetText) {
-          setphase(Phase.Pause);
+        if (newText === targetText) {
+          setPhase(Phase.Pause);
         }
 
         const timeout = setTimeout(() => {
-          setText(NewText);
-        }, TypeSpeed);
+          setText(newText);
+        }, typeSpeed);
         return () => clearTimeout(timeout);
       }
 
-      // case Phase.Deleting: {
-      //   if (!TargetText) {
-      //     setphase(Phase.Typing);
-      //     return;
-      //   }
-      //   const NewText = TargetText.slice(0, Text.length - 1);
+      case Phase.Deleting: {
+        if (Text ===  '') { 
+          return;
+        }
+        
+        const newText = targetText.slice(0, Text.length - 1);
 
-      //   const timeout = setTimeout(() => {
-      //     setText(NewText);
-      //   }, 60);
-      //   return () => clearTimeout(timeout);
-      // }
+        const timeout = setTimeout(() => {
+          setText(newText);
+        }, typeSpeed);
+        return () => clearTimeout(timeout);
+      }
       case Phase.Pause:
       default:
         const timeout = setTimeout(() => {
-          setphase(Phase.Deleting);
-        }, 100);
+          setPhase(Phase.Deleting);
+        }, typeSpeed);
         return () => clearTimeout(timeout);
     }
-  }, [TargetText, Text]);
+  }, [targetText, Text, inView , phase]);
 
   return Text;
 };

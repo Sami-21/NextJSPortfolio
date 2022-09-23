@@ -26,13 +26,13 @@ const Home: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <div className=" min-h-screen max-w-screen">
-        <Intro destroyDelay={500} />
-        <LoadingWidget />
-        <Noisebackground showCompDelay={500} />
-        <NavBar showCompDelay={5000} />
+        {/* <Intro destroyDelay={500} />
+        <LoadingWidget /> */}
+        <Noisebackground showCompDelay={0} />
+        <NavBar showCompDelay={0} />
         {/* <TypingTextEffect /> */}
-        {/* <IntroText />
-      <AboutSection />
+         <IntroText />
+      {/*<AboutSection />
       <WorkSection /> */}
       </div>
     </>

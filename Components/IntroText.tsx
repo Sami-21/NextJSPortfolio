@@ -2,18 +2,24 @@
 import React, { useEffect } from "react";
 import useTextTyping from "../hooks/useTextTyping";
 import style from "../styles/IntroText.module.css";
+import { InView, useInView } from "react-intersection-observer";
+
 
 const IntroText: React.FC = () => {
   let Transition1: string = "Ps: A wx Mvqk$ BctrKzsgf Huljhezsw";
   let Transition2: string = "Ma! Q fd Xifv_ UnrsZlomz Pvftkqabk";
   let Transition3: string = `Hi, I am Sami, FullStack Developer`;
 
-  const TextState1: string = useTextTyping(Transition1, 60);
-  const TextState2: string = useTextTyping(Transition2, 60);
-  const TextState3: string = useTextTyping(Transition3, 60);
+ const {ref , inView , entry } = useInView({
+    threshold:0,
+  });
+  const TextState1: string = useTextTyping(Transition1, 60,inView);
+  const TextState2: string = useTextTyping(Transition2, 60,inView);
+  const TextState3: string = useTextTyping(Transition3, 60,inView);
+  
 
   return (
-    <div className={style.TextContainer}>
+    <div ref={ref} className={style.TextContainer}>
       <h1 id="introText" className={`${style.IntroText} md:text-base `}>
         {/* First State */}
 
