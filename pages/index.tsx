@@ -9,7 +9,6 @@ import WorkSection from "../Components/WorkSection";
 
 import Intro from "../Components/Intro";
 import LoadingWidget from "../Components/LoadingWidget";
-// import TypingTextEffect from "../Components/TypingTextEffect";
 
 const Home: NextPage = () => {
   return (
@@ -30,10 +29,9 @@ const Home: NextPage = () => {
         <LoadingWidget /> */}
         <Noisebackground showCompDelay={0} />
         <NavBar showCompDelay={0} />
-        {/* <TypingTextEffect /> */}
-         <IntroText />
-      {/*<AboutSection />
-      <WorkSection /> */}
+        <IntroText />
+        <AboutSection />
+        {/* <WorkSection /> */}
       </div>
     </>
   );

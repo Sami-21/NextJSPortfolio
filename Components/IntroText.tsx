@@ -1,22 +1,19 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-import React, { useEffect } from "react";
+import React from "react";
 import useTextTyping from "../hooks/useTextTyping";
 import style from "../styles/IntroText.module.css";
-import { InView, useInView } from "react-intersection-observer";
-
+import { useInView } from "react-intersection-observer";
 
 const IntroText: React.FC = () => {
   let Transition1: string = "Ps: A wx Mvqk$ BctrKzsgf Huljhezsw";
   let Transition2: string = "Ma! Q fd Xifv_ UnrsZlomz Pvftkqabk";
   let Transition3: string = `Hi, I am Sami, FullStack Developer`;
 
- const {ref , inView , entry } = useInView({
-    threshold:0,
+  const { ref, inView } = useInView({
+    threshold: 0,
   });
-  const TextState1: string = useTextTyping(Transition1, 60,inView);
-  const TextState2: string = useTextTyping(Transition2, 60,inView);
-  const TextState3: string = useTextTyping(Transition3, 60,inView);
-  
+  const TextState1: string = useTextTyping(Transition1, 20, inView);
+  const TextState2: string = useTextTyping(Transition2, 20, inView);
+  const TextState3: string = useTextTyping(Transition3, 20, inView);
 
   return (
     <div ref={ref} className={style.TextContainer}>

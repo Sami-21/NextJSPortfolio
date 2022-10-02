@@ -9,17 +9,17 @@ const AboutSection: React.FC = () => {
   const Transition3: string = "About me";
   const AboutText: string =
     "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos dolorumfuga iure et? Exercitationem, molestiae magnam placeat laboriosameaque inventore deleniti provident similique excepturi cum laborumillo et explicabo nihil sequi delectus animi non voluptatem quo quibusdam! Eos, expedita sit!";
-  const AboutTextTyping = useTextTyping(AboutText, 10);
+  //const AboutTextTyping = useTextTyping(AboutText, 10);
 
   return (
     <div className={style.ContentContainer}>
       <CODTextEffect
-        Transition1={Transition1}
-        Transition2={Transition2}
-        Transition3={Transition3}
+        transition1={Transition1}
+        transition2={Transition2}
+        transition3={Transition3}
       ></CODTextEffect>
       <div className={style.TextContainer}>
-        <p className={style.Text}>{AboutTextTyping} </p>
+        <p className={style.Text}>{AboutText} </p>
         <div className={style.MyGIF}></div>
       </div>
     </div>
