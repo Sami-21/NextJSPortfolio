@@ -1,22 +1,21 @@
 .TextContainer {
   width: 100vw;
-  height: 100vh;
-  padding-left: 100px;
+  height: 90vh;
+  padding: 0 50px 0px 50px;
 }
 
 .IntroText {
   position: relative;
-  font-size: 192px;
   color: #fff;
   opacity: 1;
   z-index: 5;
-  width: 100%;
+  font-size: 192px;
   line-height: 200px;
+  width: 100%;
 }
 
 .FirstTextTransition {
   position: absolute;
-  font-size: 192px;
   color: rgba(255, 255, 255, 0.2);
   top: 0;
   left: 0;
@@ -25,7 +24,6 @@
 
 .SecondTextTransition {
   position: absolute;
-  font-size: 192px;
   color: rgba(255, 255, 255, 0.5);
   top: 0;
   left: 0;
@@ -57,10 +55,29 @@
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 192px;
   color: #48ff50;
   filter: blur(10px);
   z-index: -10;
+}
+@media (max-width: 1280px) {
+  .IntroText {
+    font-size: 164px;
+    line-height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .IntroText {
+    font-size: 120px;
+    line-height: 150px;
+  }
+}
+
+@media (max-width: 767px) {
+  .IntroText {
+    font-size: 72px;
+    line-height: 100px;
+  }
 }
 
 @keyframes fade-in-out {

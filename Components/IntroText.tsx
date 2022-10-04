@@ -11,15 +11,14 @@ const IntroText: React.FC = () => {
   const { ref, inView } = useInView({
     threshold: 0,
   });
-  const TextState1: string = useTextTyping(Transition1, 20, inView);
-  const TextState2: string = useTextTyping(Transition2, 20, inView);
-  const TextState3: string = useTextTyping(Transition3, 20, inView);
+  const TextState1: string = useTextTyping(Transition1, 60, inView);
+  const TextState2: string = useTextTyping(Transition2, 60, inView);
+  const TextState3: string = useTextTyping(Transition3, 60, inView);
 
   return (
     <div ref={ref} className={style.TextContainer}>
       <h1 id="introText" className={`${style.IntroText} md:text-base `}>
         {/* First State */}
-
         <span className={`${style.FirstTextTransition}`}>
           {TextState1.split("")
             .slice(0, 3)
@@ -53,7 +52,6 @@ const IntroText: React.FC = () => {
         </span>
 
         {/* Second State */}
-
         <span className={`${style.SecondTextTransition}  `}>
           {TextState2.split("")
             .slice(0, 3)
@@ -81,7 +79,6 @@ const IntroText: React.FC = () => {
         </span>
 
         {/* Third State */}
-
         <span className={style.ThirdTextTransition}>
           {TextState3.split("")
             .slice(0, 3)

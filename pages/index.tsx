@@ -31,7 +31,7 @@ const Home: NextPage = () => {
         <NavBar showCompDelay={0} />
         <IntroText />
         <AboutSection />
-        {/* <WorkSection /> */}
+        <WorkSection />
       </div>
     </>
   );

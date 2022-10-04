@@ -18,11 +18,11 @@ const CODTextEffect: React.FC<Props> = ({
     threshold: 0,
   });
 
-  const TextState1: string = useTextTyping(transition1, 20, inView);
-  const TextState2: string = useTextTyping(transition2, 20, inView);
-  const TextState3: string = useTextTyping(transition3, 20, inView);
+  const TextState1: string = useTextTyping(transition1, 60, inView);
+  const TextState2: string = useTextTyping(transition2, 60, inView);
+  const TextState3: string = useTextTyping(transition3, 60, inView);
   return (
-    <h1 ref={ref} className={`${style.IntroText} text-4xl`}>
+    <h1 ref={ref} className={style.IntroText}>
       <span className={`${style.FirstTextTransition}`}>
         {TextState1.split("").map((char, index) => {
           return (
