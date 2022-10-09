@@ -29,7 +29,7 @@ const IntroText: React.FC = () => {
                 </span>
               );
             })}
-          <br />
+
           {TextState1.split("")
             .slice(3, 14)
             .map((char: string, index: number) => {
@@ -60,7 +60,7 @@ const IntroText: React.FC = () => {
                 {char}
               </span>
             ))}
-          <br />
+
           {TextState2.split("")
             .slice(3, 14)
             .map((char: string, index: number) => (
@@ -68,7 +68,9 @@ const IntroText: React.FC = () => {
                 {char}
               </span>
             ))}
-          <br />
+          <span className="xl:block hidden">
+            <br />
+          </span>
           {TextState2.split("")
             .slice(14)
             .map((char: string, index: number) => (
@@ -87,7 +89,7 @@ const IntroText: React.FC = () => {
                 {char}
               </span>
             ))}
-          <br />
+
           {TextState3.split("")
             .slice(3, 14)
             .map((char: string, index: number) => (
@@ -104,6 +106,7 @@ const IntroText: React.FC = () => {
               </span>
             ))}
         </span>
+        {/*Text Blur*/}
         <span className={style.IntroTextBlur}>
           {TextState3.split("")
             .slice(0, 3)
@@ -112,7 +115,6 @@ const IntroText: React.FC = () => {
                 {char}
               </span>
             ))}
-          <br />
           {TextState3.split("")
             .slice(3, 14)
             .map((char: string, index: number) => (

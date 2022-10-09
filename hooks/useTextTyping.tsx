@@ -10,7 +10,7 @@ const useTextTyping = (
   targetText: string,
   typeSpeed: number,
   inView: boolean
-) => {
+): string => {
   const [phase, setPhase] = useState(Phase.Pause);
   const [Text, setText] = useState(``);
   useEffect(() => {
