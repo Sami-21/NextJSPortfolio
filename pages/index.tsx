@@ -30,7 +30,7 @@ const Home: NextPage = () => {
         <Noisebackground showCompDelay={0} />
         <NavBar showCompDelay={0} />
         <IntroText />
-        <AboutSection />
+        {/* <AboutSection /> */}
         <WorkSection />
       </div>
     </>

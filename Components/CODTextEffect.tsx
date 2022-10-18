@@ -15,7 +15,7 @@ const CODTextEffect: React.FC<Props> = ({
   transition3,
 }) => {
   const { ref, inView } = useInView({
-    threshold: 0,
+    threshold: 0.8,
   });
 
   const TextState1: string = useTextTyping(transition1, 60, inView);

@@ -32,17 +32,13 @@ const useTextTyping = (
         }, typeSpeed);
         return () => clearTimeout(timeout);
       }
-
       case Phase.Deleting: {
         if (Text.length === 0) {
           return;
         }
-
         const newText = targetText.slice(0, Text.length - 1);
-
         const timeout = setTimeout(() => {
           setText(newText);
-          console.log("deleting");
         }, typeSpeed);
         return () => clearTimeout(timeout);
       }
