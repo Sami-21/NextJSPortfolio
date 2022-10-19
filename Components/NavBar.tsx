@@ -1,23 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import style from "../styles/NavBar.module.css";
 
-interface showCompDelayProps {
-  showCompDelay: number;
-}
-
-const NavBar: React.FC<showCompDelayProps> = ({ showCompDelay }) => {
+const NavBar: React.FC = () => {
   const [isActive, setIsActive] = useState([false, false, false, false, false]);
-  const [isShown, setIsShown] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const timer: NodeJS.Timer = setTimeout(() => {
-      setIsShown(true);
-    }, showCompDelay);
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [showCompDelay, isShown]);
+
 
   let navigationState: boolean[] = [false, false, false, false, false];
   const logoItems: string[] = ["9", "M", "S"];
@@ -43,7 +31,7 @@ const NavBar: React.FC<showCompDelayProps> = ({ showCompDelay }) => {
     console.log(isMenuOpen);
   };
 
-  return isShown ? (
+  return (
     <nav className={style.NavBar}>
       <div
         onClick={() => setIsActive([false, false, false, false, false])}
@@ -104,7 +92,7 @@ const NavBar: React.FC<showCompDelayProps> = ({ showCompDelay }) => {
         <span className={style.line}></span>
       </div>
     </nav>
-  ) : null;
+  );
 };
 
 export default NavBar;

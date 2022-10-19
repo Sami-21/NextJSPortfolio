@@ -1,7 +1,6 @@
 import React from "react";
 import CODTextEffect from "./CODTextEffect";
 import style from "../styles/WorkSection.module.css";
-import ProjectContainer from "./ProjectContainer";
 
 const WorkSection: React.FC = () => {
   const Transition1: string = "Mnut";

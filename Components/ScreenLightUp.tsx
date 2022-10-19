@@ -4,7 +4,7 @@ import intro from "../styles/Intro.module.css";
 interface destroyDelayProps {
   destroyDelay: number;
 }
-const Intro: React.FC<destroyDelayProps> = ({ destroyDelay }) => {
+const ScreenLightUp: React.FC<destroyDelayProps> = ({ destroyDelay }) => {
   const [isShown, setIsShown] = useState(true);
   useEffect(() => {
     const timer: NodeJS.Timer = setTimeout(() => {
@@ -23,4 +23,4 @@ const Intro: React.FC<destroyDelayProps> = ({ destroyDelay }) => {
   ) : null;
 };
 
-export default Intro;
+export default ScreenLightUp;

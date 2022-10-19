@@ -1,22 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import style from "../styles/Noisebackground.module.css";
 
-interface showCompDelayProps {
-  showCompDelay: number;
-}
-const Noisebackground: React.FC<showCompDelayProps> = ({
-  showCompDelay,
-}: any) => {
-  const [isShown, setIsShown] = useState(false);
-  useEffect(() => {
-    const timer: NodeJS.Timer = setTimeout(() => {
-      setIsShown(true);
-    }, showCompDelay);
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [isShown, showCompDelay]);
-  return isShown ? (
+
+const Noisebackground: React.FC = () => {
+
+  return (
     <div className={style.Noise}>
       <svg>
         <filter id="noise">
@@ -32,7 +20,7 @@ const Noisebackground: React.FC<showCompDelayProps> = ({
         </filter>
       </svg>
     </div>
-  ) : null;
+  )
 };
 
 export default Noisebackground;

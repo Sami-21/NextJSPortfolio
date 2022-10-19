@@ -9,7 +9,7 @@ const IntroText: React.FC = () => {
   let Transition3: string = `Hi, I am Sami, FullStack Developer`;
 
   const { ref, inView } = useInView({
-    threshold: 0,
+    threshold: 0.7,
   });
   const TextState1: string = useTextTyping(Transition1, 60, inView);
   const TextState2: string = useTextTyping(Transition2, 60, inView);
