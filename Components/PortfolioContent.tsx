@@ -23,9 +23,9 @@ const PortfolioContent: React.FC<ComponentProp> = ({ showCompDelay }) => {
     return isShown ? (
         < >
             <Noisebackground />
-            <NavBar />
+            {/* <NavBar />
             <IntroText />
-            <AboutSection />
+            <AboutSection /> */}
             <WorkSection />
         </ >) : null
 

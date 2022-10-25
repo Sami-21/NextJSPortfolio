@@ -1,0 +1,95 @@
+.ProjectContainer {
+  position: relative;
+  border: 1px #48ff50 solid;
+  margin-top: 25px;
+  color: white;
+}
+
+/* 
+.ProjectContentVisible {
+  animation: show-content .5s ease-in 1s forwards;
+}
+
+.ProjectContentHidden {
+  animation: hide-content .5s ease-in 1s forwards;
+
+} */
+
+.ProjectFadeIn {
+  animation: project-fade-in .75s ease-in-out forwards;
+}
+
+.ProjectFadeIn::after,
+.ProjectFadeOut::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: 1px #48ff50 solid;
+  filter: blur(2.5px);
+}
+
+.ProjectFadeOut {
+  animation: project-fade-out .75s ease-in-out forwards;
+}
+
+
+@keyframes project-fade-in {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+
+  33% {
+    width: 100%;
+    height: 0px;
+  }
+
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes project-fade-out {
+  0% {
+    width: 100%;
+    height: 100%;
+  }
+
+  33% {
+    width: 100%;
+    height: 0px;
+  }
+
+  100% {
+    width: 0px;
+    height: 0px;
+  }
+}
+
+/* @keyframes show-content {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes hide-content {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+
+  100% {
+    display: none;
+    opacity: 0;
+  }
+} */
