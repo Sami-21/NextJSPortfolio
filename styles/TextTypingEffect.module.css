@@ -1,0 +1,15 @@
+.TextContainer {
+    position: relative;
+
+}
+
+.TypedText {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.Text {
+    position: relative;
+    opacity: 0;
+}

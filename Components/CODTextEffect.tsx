@@ -48,11 +48,13 @@ const CODTextEffect: React.FC<Props> = ({
       </span>
       <span className={style.IntroTextBlur}>
         {TextState3.split("").map((char, index) => (
-          <span className={`${style.Showed}`} key={index}>
+          <span className={`${style.Showed}`} key={index}  >
             {char}
           </span>
         ))}
       </span>
+      <span className={`${style.ThirdTextTransition} ${style.hidden}`}>{transition3}</span>
+
     </h1>
   );
 };

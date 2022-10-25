@@ -4,10 +4,7 @@ import style from "../styles/NavBar.module.css";
 const NavBar: React.FC = () => {
   const [isActive, setIsActive] = useState([false, false, false, false, false]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-
-
-  let navigationState: boolean[] = [false, false, false, false, false];
+  const navigationState: boolean[] = [false, false, false, false, false];
   const logoItems: string[] = ["9", "M", "S"];
   const NavBarItems: string[][] = [
     ["99999", "codmw", "About"],
@@ -28,7 +25,6 @@ const NavBar: React.FC = () => {
 
   const toggleMenu = (): any => {
     setIsMenuOpen(!isMenuOpen);
-    console.log(isMenuOpen);
   };
 
   return (
@@ -56,9 +52,11 @@ const NavBar: React.FC = () => {
               className="cursor-pointer relative"
               onClick={() => {
                 NavBarHandler(i);
-                setTimeout(() => {
-                  toggleMenu();
-                }, 250);
+                if (window.innerWidth <= 1028) {
+                  setTimeout(() => {
+                    toggleMenu();
+                  }, 250);
+                }
               }}
               key={i}
             >

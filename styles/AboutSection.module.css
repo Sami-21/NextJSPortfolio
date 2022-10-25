@@ -1,23 +1,32 @@
 .ContentContainer {
+  position: relative;
   width: 100vw;
-  height: 100vh;
-  padding: 0 100px 100px 100px;
+  min-height: 100vh;
+  padding: 0 50px 50px 50px;
 }
 
 .TextContainer {
-  position: relative;
-  top: 250px;
   display: flex;
+  gap: 75px;
   width: 100%;
+  height: fit-content;
   justify-content: space-between;
   color: white;
-  overflow: visible;
+  padding-top: 50px;
 }
 
 .Text {
-  font-size: 40px;
-  width: calc(100% - 500px);
+  font-size: 32px;
+  width: 50%;
 }
+
+.GIFContainer {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .MyGIF {
   position: relative;
@@ -25,7 +34,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 450px;
+  min-width: 450px;
   height: 450px;
   border-radius: 50%;
   overflow: hidden;
@@ -49,4 +58,21 @@
   background: #48ff50;
   border-radius: 50%;
   z-index: 1000;
+}
+
+
+@media (max-width: 768px) {
+  .TextContainer {
+    flex-direction: column-reverse;
+  }
+
+  .GIFContainer {
+    width: 100%;
+
+  }
+
+  .Text {
+    font-size: 32px;
+    width: 100%;
+  }
 }

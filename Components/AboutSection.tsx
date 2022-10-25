@@ -17,9 +17,11 @@ const AboutSection: React.FC = () => {
       ></CODTextEffect>
       <div className={style.TextContainer}>
         <div className={style.Text}>
-          <TextTypingEffect text="Hello, my name is Sami! I'm a web developer with extensive UI/UX design expertise. Front-end web apps are my specialty, and the major languages in my tech stack are JavaScript,TypeScript ,Vue, React, and, of course, HTML/CSS. I'm a lifelong learner (now learning wordpress) that enjoys building, perfecting, and pushing myself to new boundaries in my software development adventure." />
+          <TextTypingEffect text="Hello, my name is Sami! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quibusdam in sapiente, dolore placeat aliquam minus temporibus quod, beatae voluptates possimus culpa? Optio exercitationem nisi explicabo magni ut mollitia minima quod, asperiores maiores ex voluptas." />
         </div>
-        <div className={style.MyGIF}></div>
+        <div className={style.GIFContainer}>
+          <div className={style.MyGIF}></div>
+        </div>
       </div>
     </div>
   );

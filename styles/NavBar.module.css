@@ -21,7 +21,7 @@
   position: relative;
   width: fit-content;
   height: fit-content;
-  font-size: 124px;
+  font-size: 88px;
   cursor: pointer;
 }
 
@@ -69,7 +69,7 @@
   align-items: center;
   width: 70vw;
   height: 150px;
-  font-size: 64px;
+  font-size: 48px;
 }
 
 .NavBarItemsContainer li {
@@ -98,7 +98,7 @@
     background-color: #00090a;
     width: 100vw;
     height: 100vh;
-    font-size: 64px;
+    font-size: 48px;
     transition: 0.5s;
   }
 

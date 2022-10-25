@@ -1,6 +1,6 @@
 .TextContainer {
   width: 100vw;
-  min-height: 100vh;
+  min-height: 90vh;
   padding: 100px 50px;
 }
 
@@ -60,7 +60,16 @@
   z-index: -10;
 }
 
+.hidden {
+  position: relative !important;
+  opacity: 0 !important;
+}
+
 @media (max-width: 1280px) {
+  .TextContainer {
+    min-height: 90vh;
+  }
+
   .IntroText {
     font-size: 94px;
     line-height: 100px;
@@ -68,18 +77,18 @@
 }
 
 @media (max-width: 768px) {
+  .TextContainer {
+    min-height: 90vh;
+
+  }
+
   .IntroText {
     font-size: 72px;
-    line-height: 75px;
+
   }
 }
 
-@media (max-width: 767px) {
-  .IntroText {
-    font-size: 54px;
-    line-height: 50px;
-  }
-}
+
 
 @keyframes fade-in-out {
   0% {

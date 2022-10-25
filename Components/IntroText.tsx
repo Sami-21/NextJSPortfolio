@@ -9,7 +9,7 @@ const IntroText: React.FC = () => {
   let Transition3: string = `Hi, I am Sami, FullStack Developer`;
 
   const { ref, inView } = useInView({
-    threshold: 0.7,
+    threshold: 0.6,
   });
   const TextState1: string = useTextTyping(Transition1, 60, inView);
   const TextState2: string = useTextTyping(Transition2, 60, inView);
@@ -131,7 +131,9 @@ const IntroText: React.FC = () => {
               </span>
             ))}
         </span>
+        <span className={`${style.ThirdTextTransition} ${style.hidden}`}>{Transition3}</span>
       </h1>
+
     </div>
   );
 };

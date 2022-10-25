@@ -18,9 +18,9 @@ const Home: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      <div className=" min-h-screen max-w-screen">
-        <IntroComponents />
-        <PortfolioContent showCompDelay={5000} />
+      <div className=" min-h-screen max-w-screen ">
+        {/* <IntroComponents /> */}
+        <PortfolioContent showCompDelay={0} />
       </div>
     </>
   );

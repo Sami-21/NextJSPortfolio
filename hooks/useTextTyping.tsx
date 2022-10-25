@@ -14,7 +14,6 @@ const useTextTyping = (
   const [phase, setPhase] = useState(Phase.Pause);
   const [Text, setText] = useState(``);
   useEffect(() => {
-    console.log([targetText, Text, inView, typeSpeed, phase]);
     if (inView) {
       setPhase(Phase.Typing);
     } else {
