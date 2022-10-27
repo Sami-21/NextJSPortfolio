@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import AboutSection from './AboutSection'
-import GlitchedText from './GlitchedText'
 import IntroText from './IntroText'
 import NavBar from './NavBar'
 import Noisebackground from './Noisebackground'
@@ -23,9 +22,9 @@ const PortfolioContent: React.FC<Props> = ({ showCompDelay }) => {
     return isShown ? (
         < >
             <Noisebackground />
-            {/* <NavBar />
+            <NavBar />
             <IntroText />
-            <AboutSection /> */}
+            <AboutSection />
             <WorkSection />
         </ >) : null
 

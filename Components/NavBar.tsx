@@ -70,7 +70,7 @@ const NavBar: React.FC = () => {
                   }
                   data-before={item.toUpperCase()}
                 >
-                  <span className={style.item}>{item.toUpperCase()}</span>
+                  <a href={`#${item}`} className={style.item}>{item.toUpperCase()}</a>
                 </span>
               ))}
             </li>

@@ -22,7 +22,20 @@ const WorkSection: React.FC = () => {
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       links: [{
         text: "study case",
-        url: "https://www.youtube.com/watch?v=4wIo7pFpiIc&ab_channel=Skillet",
+        url: "",
+      },
+      {
+        text: "visit website",
+        url: "",
+      },
+      ]
+    },
+    {
+      name: "project name",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      links: [{
+        text: "study case",
+        url: "",
       },
       {
         text: "visit website",
@@ -32,7 +45,7 @@ const WorkSection: React.FC = () => {
     }
   ]
   return (
-    <div className={style.ContentContainer}>
+    <div className={style.ContentContainer} id="Work">
       <CODTextEffect
         transition1={Transition1}
         transition2={Transition2}
