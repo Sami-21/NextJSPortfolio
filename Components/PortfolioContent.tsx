@@ -6,11 +6,11 @@ import NavBar from './NavBar'
 import Noisebackground from './Noisebackground'
 import WorkSection from './WorkSection'
 
-interface ComponentProp {
+interface Props {
     showCompDelay: number;
 }
 
-const PortfolioContent: React.FC<ComponentProp> = ({ showCompDelay }) => {
+const PortfolioContent: React.FC<Props> = ({ showCompDelay }) => {
     const [isShown, setIsShown] = useState(false);
     useEffect(() => {
         const timer: NodeJS.Timer = setTimeout(() => {

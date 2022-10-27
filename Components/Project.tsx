@@ -2,24 +2,28 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 import style from "../styles/Project.module.css";
 
-
 interface ProjectProps {
   name: string;
   description: string;
+  links: link[];
+}
+interface link {
+  text: string;
   url: string;
 }
 
-
-const Project: React.FC<ProjectProps> = ({ name, description, url }) => {
+const Project: React.FC<ProjectProps> = ({ name, description, links }) => {
 
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
 
-  return <div ref={ref} className={inView ? ` ${style.ProjectContainer} ${style.ProjectFadeIn}` : `${style.ProjectContainer} ${style.ProjectFadeOut}`}>
-    <h3 className={inView ? `${style.ProjectContent} ${style.ProjectContentVisible}` : ` ${style.ProjectContent} ${style.ProjectContentHidden}`}> {name}</h3>
-    <p className={inView ? `${style.ProjectContent} ${style.ProjectContentVisible}` : ` ${style.ProjectContent} ${style.ProjectContentHidden}`}> {description}</p>
-    <a href={url} target="_blank" className={inView ? `${style.ProjectContent} ${style.ProjectContentVisible}` : ` ${style.ProjectContent} ${style.ProjectContentHidden}`}>visit</a>
+  return <div ref={ref} className={` ${style.ProjectContainer} ${inView ? style.ProjectFadeIn : style.ProjectFadeOut}`}>
+    <h2 data-text={name} className={`${style.ProjectTitle} ${inView ? style.ProjectContentVisible : style.ProjectContentHidden}`}> {name}</h2>
+    <p className={`${style.ProjectDescription} ${inView ? style.ProjectContentVisible : style.ProjectContentHidden}`}> {description}</p>
+    {links.map((link: link, index: number) => (
+      <a key={index} href={link.url} target="_blank" data-text={link.text} className={`${style.ProjectLinks} ${inView ? style.ProjectContentVisible : style.ProjectContentHidden}`}>{link.text} </a>
+    ))}
   </div>;
 };
 

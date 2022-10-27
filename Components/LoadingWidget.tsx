@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import style from "../styles/LoadingWidget.module.css";
 
-const LoadingWidget: React.FC = () => {
-  interface singleBit {
-    style: string;
-    value: number;
-  }
+interface singleBit {
+  style: string;
+  value: number;
+}
 
+const LoadingWidget: React.FC = () => {
   const offBit: singleBit = { style: "bit_off", value: 0 };
   const onBit: singleBit = { style: "bit_on", value: 1 };
-
   let offBits: singleBit[] = new Array(8).fill(offBit);
   let onBits: singleBit[] = new Array(0);
 

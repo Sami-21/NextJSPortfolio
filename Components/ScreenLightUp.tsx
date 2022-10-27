@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import intro from "../styles/Intro.module.css";
 
-interface destroyDelayProps {
+interface Props {
   destroyDelay: number;
 }
-const ScreenLightUp: React.FC<destroyDelayProps> = ({ destroyDelay }) => {
+
+const ScreenLightUp: React.FC<Props> = ({ destroyDelay }) => {
   const [isShown, setIsShown] = useState(true);
   useEffect(() => {
     const timer: NodeJS.Timer = setTimeout(() => {
