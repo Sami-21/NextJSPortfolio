@@ -9,7 +9,7 @@ const AboutSection: React.FC = () => {
   const Transition3: string = "About me";
 
   return (
-    <div className={style.ContentContainer}>
+    <div className={style.ContentContainer} id="About">
       <CODTextEffect
         transition1={Transition1}
         transition2={Transition2}

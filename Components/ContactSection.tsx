@@ -15,6 +15,7 @@ const ContactSection: React.FC = () => {
         inView ? style.FadeIn : style.FadeOut
       }`}
       action=""
+      id="Contact"
     >
       <CODTextEffect
         transition1="Qntmbv"

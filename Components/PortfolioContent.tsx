@@ -24,10 +24,10 @@ const PortfolioContent: React.FC<Props> = ({ showCompDelay }) => {
   return isShown ? (
     <>
       <Noisebackground />
-      {/* <NavBar />
-            <IntroText />
-            <AboutSection /> */}
-      {/* <WorkSection /> */}
+      <NavBar />
+      <IntroText />
+      <AboutSection />
+      <WorkSection />
       <ContactSection />
     </>
   ) : null;
