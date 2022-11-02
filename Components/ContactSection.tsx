@@ -5,7 +5,7 @@ import CODTextEffect from "./CODTextEffect";
 
 const ContactSection: React.FC = () => {
   const { ref, inView } = useInView({
-    threshold: 0,
+    threshold: 0.5,
   });
 
   return (
