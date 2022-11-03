@@ -7,7 +7,7 @@ interface Props {
   text: string;
 }
 
-const CODTextEffect: React.FC<Props> = ({ text }) => {
+const TextTypingEffect: React.FC<Props> = ({ text }) => {
   const { ref, inView } = useInView({
     threshold: 0,
   });
@@ -20,4 +20,4 @@ const CODTextEffect: React.FC<Props> = ({ text }) => {
   </div>
 };
 
-export default CODTextEffect;
+export default TextTypingEffect;

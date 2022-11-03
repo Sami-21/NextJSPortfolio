@@ -171,18 +171,18 @@
 }
 
 .NavBarItem:nth-child(1) {
-  animation: fade-out 0.1s ease-out .5s forwards;
+  animation: fade-out 0.1s ease-out .2s forwards;
 }
 
 .NavBarItem:nth-child(2) {
   opacity: 0;
-  animation: fade-in-out 0.1s ease-out .6s forwards;
+  animation: fade-in-out 0.1s ease-out .3s forwards;
 }
 
 .NavBarItem:nth-child(3) {
   cursor: pointer;
   opacity: 0;
-  animation: fade-in 0.1s ease-out .7s forwards;
+  animation: fade-in 0.1s ease-out .4s forwards;
 }
 
 .item {

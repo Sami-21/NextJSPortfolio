@@ -34,6 +34,7 @@ const LoadingWidget: React.FC = () => {
   }, []);
   return isShown ? (
     <div className={style.component_container}>
+      {/* eslint-disable-next-line react/no-unknown-property */}
       <style jsx>
         {`
           @media (min-width: 1200px) {
