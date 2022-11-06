@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #ffffff;
+  color: #48ff50;
   background-color: #00090a;
   opacity: 0;
   z-index: 100;
@@ -34,16 +34,16 @@
 
 .text:nth-child(1),
 .text:nth-child(2) {
-  color: white;
+  color: #48ff50;
 }
 
 .text:nth-child(1) {
-  animation: fade-out 0.1s ease-out .5s forwards;
+  animation: fade-out 0.1s ease-out 0.5s forwards;
 }
 
 .text:nth-child(2) {
   opacity: 0;
-  animation: fade-in-out 0.1s ease-out .6s forwards;
+  animation: fade-in-out 0.1s ease-out 0.6s forwards;
 }
 
 .text:nth-child(3)::before {
@@ -58,14 +58,14 @@
   position: absolute;
   top: 0;
   left: 0;
-  animation: fade-in 0.1s ease-out .7s forwards;
+  animation: fade-in 0.1s ease-out 0.7s forwards;
 }
 
 /* Navigation Items List Container */
 .NavBarItemsContainer {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 70vw;
   height: 150px;
@@ -171,18 +171,18 @@
 }
 
 .NavBarItem:nth-child(1) {
-  animation: fade-out 0.1s ease-out .2s forwards;
+  animation: fade-out 0.1s ease-out 0.2s forwards;
 }
 
 .NavBarItem:nth-child(2) {
   opacity: 0;
-  animation: fade-in-out 0.1s ease-out .3s forwards;
+  animation: fade-in-out 0.1s ease-out 0.3s forwards;
 }
 
 .NavBarItem:nth-child(3) {
   cursor: pointer;
   opacity: 0;
-  animation: fade-in 0.1s ease-out .4s forwards;
+  animation: fade-in 0.1s ease-out 0.4s forwards;
 }
 
 .item {
@@ -204,6 +204,14 @@
   content: attr(data-before);
   color: #48ff50;
   filter: blur(5px);
+  z-index: -1;
+}
+.ActiveItem a::after {
+  position: absolute;
+  top: 0;
+  left: -25px;
+  content: ">";
+  color: #48ff50;
   z-index: -1;
 }
 

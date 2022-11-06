@@ -5,12 +5,12 @@
   position: relative;
   border: 1px #48ff50 solid;
   margin-top: 25px;
-  color: white;
+  color: #48ff50;
 }
 
 .ProjectTitle {
   position: relative;
-  color: #fff;
+  color: #48ff50;
   opacity: 0;
   font-size: 48px;
 }
@@ -34,7 +34,7 @@
 .ProjectLinks {
   font-size: 22px;
   position: relative;
-  color: #fff;
+  color: #48ff50;
   opacity: 0;
   margin-right: 15px;
   cursor: pointer;
@@ -45,7 +45,7 @@
   content: attr(data-text);
   position: absolute;
   top: 0;
-  left: 0;
+  left: 17px;
   font-size: 22px;
   color: #48ff50;
   filter: blur(2.5px);
@@ -54,16 +54,16 @@
 }
 
 .ProjectContentVisible {
-  animation: show-content .75s linear forwards;
+  animation: show-content 0.75s linear forwards;
   animation-delay: 900ms;
 }
 
 .ProjectContentHidden {
-  animation: hide-content .05s linear forwards;
+  animation: hide-content 0.05s linear forwards;
 }
 
 .ProjectFadeIn {
-  animation: project-fade-in .75s ease-in-out forwards;
+  animation: project-fade-in 0.75s ease-in-out forwards;
 }
 
 .ProjectFadeIn::before,
@@ -80,9 +80,8 @@
 }
 
 .ProjectFadeOut {
-  animation: project-fade-out .75s ease-in-out forwards;
+  animation: project-fade-out 0.75s ease-in-out forwards;
 }
-
 
 @keyframes project-fade-in {
   0% {

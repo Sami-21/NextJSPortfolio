@@ -1,7 +1,6 @@
 @font-face {
   font-family: "VT323";
-  src: url("../public/VT323-Regular.ttf") format("truetype");
-
+  src: url("../assets/VT323-Regular.ttf") format("truetype");
 }
 
 html {

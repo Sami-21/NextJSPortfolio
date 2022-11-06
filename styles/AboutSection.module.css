@@ -11,7 +11,7 @@
   width: 100%;
   height: fit-content;
   justify-content: space-between;
-  color: white;
+  color: #48ff50;
   padding-top: 50px;
 }
 
@@ -27,10 +27,9 @@
   justify-content: center;
 }
 
-
 .MyGIF {
   position: relative;
-  background-image: url(../public/MOSHED-2022-3-28-0-11-11.gif);
+  background-image: url(../assets/MOSHED-2022-3-28-0-11-11.gif);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -60,19 +59,27 @@
   z-index: 1000;
 }
 
-
-@media (max-width: 768px) {
+@media (max-width: 969px) {
   .TextContainer {
     flex-direction: column-reverse;
   }
 
   .GIFContainer {
     width: 100%;
-
+  }
+  .MyGIF,
+  .MyGIF::after {
+    min-width: 100%;
   }
 
   .Text {
     font-size: 32px;
     width: 100%;
+  }
+}
+@media (max-width: 540px) {
+  .MyGIF,
+  .MyGIF::after {
+    height: 300px;
   }
 }

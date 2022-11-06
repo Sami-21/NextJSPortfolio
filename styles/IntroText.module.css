@@ -6,7 +6,7 @@
 
 .IntroText {
   position: relative;
-  color: #fff;
+  color: #48ff50;
   opacity: 1;
   z-index: 5;
   font-size: 132px;
@@ -16,7 +16,7 @@
 
 .FirstTextTransition {
   position: absolute;
-  color: rgba(255, 255, 255, 0.2);
+  color: #48ff5033;
   top: 0;
   left: 0;
   overflow: hidden;
@@ -24,7 +24,7 @@
 
 .SecondTextTransition {
   position: absolute;
-  color: rgba(255, 255, 255, 0.5);
+  color: #48ff5080;
   top: 0;
   left: 0;
   overflow: hidden;
@@ -79,16 +79,12 @@
 @media (max-width: 768px) {
   .TextContainer {
     min-height: 90vh;
-
   }
 
   .IntroText {
     font-size: 72px;
-
   }
 }
-
-
 
 @keyframes fade-in-out {
   0% {

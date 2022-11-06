@@ -20,19 +20,22 @@ const Project: React.FC<ProjectProps> = ({ name, description, links }) => {
   return (
     <div
       ref={ref}
-      className={` ${style.ProjectContainer} ${inView ? style.ProjectFadeIn : style.ProjectFadeOut
-        }`}
+      className={` ${style.ProjectContainer} ${
+        inView ? style.ProjectFadeIn : style.ProjectFadeOut
+      }`}
     >
       <h2
         data-text={name}
-        className={`${style.ProjectTitle} ${inView ? style.ProjectContentVisible : style.ProjectContentHidden
-          }`}
+        className={`${style.ProjectTitle} ${
+          inView ? style.ProjectContentVisible : style.ProjectContentHidden
+        }`}
       >
         {name}
       </h2>
       <p
-        className={`${style.ProjectDescription} ${inView ? style.ProjectContentVisible : style.ProjectContentHidden
-          }`}
+        className={`${style.ProjectDescription} ${
+          inView ? style.ProjectContentVisible : style.ProjectContentHidden
+        }`}
       >
         {description}
       </p>
@@ -43,10 +46,11 @@ const Project: React.FC<ProjectProps> = ({ name, description, links }) => {
           href={link.url}
           target="_blank"
           data-text={link.text}
-          className={`${style.ProjectLinks} ${inView ? style.ProjectContentVisible : style.ProjectContentHidden
-            }`}
+          className={`${style.ProjectLinks} ${
+            inView ? style.ProjectContentVisible : style.ProjectContentHidden
+          }`}
         >
-          {link.text}
+          {"> " + link.text}
         </a>
       ))}
     </div>

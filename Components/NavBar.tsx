@@ -11,7 +11,6 @@ const NavBar: React.FC = () => {
     ["9999", "rekt", "Work"],
     ["999999", "bf2042", "Skills"],
     ["9999999", "madness", "Contact"],
-    ["9999", "doom", "Blog"],
   ];
 
   const NavBarHandler = (index: number) => {

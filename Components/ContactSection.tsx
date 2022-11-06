@@ -1,5 +1,5 @@
 import React from "react";
-import { InView, useInView } from "react-intersection-observer";
+import { useInView } from "react-intersection-observer";
 import style from "../styles/ContactSection.module.css";
 import CODTextEffect from "./CODTextEffect";
 
@@ -9,14 +9,7 @@ const ContactSection: React.FC = () => {
   });
 
   return (
-    <form
-      ref={ref}
-      className={`${style.ContactContainer} ${
-        inView ? style.FadeIn : style.FadeOut
-      }`}
-      action=""
-      id="Contact"
-    >
+    <form ref={ref} className={style.ContactContainer} id="Contact">
       <CODTextEffect
         transition1="Qntmbv"
         transition2="Pndmuw"
