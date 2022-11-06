@@ -7,6 +7,11 @@ import CSSLogo from "../assets/css_logo.svg";
 import JSLogo from "../assets/js_logo.svg";
 import ReactLogo from "../assets/react_logo.svg";
 import VueLogo from "../assets/vue_logo.svg";
+import NodeJSLogo from "../assets/nodejs_logo.svg";
+import ExprssJSLogo from "../assets/expressjs_logo.svg";
+import MongoDBLogo from "../assets/mongodb_logo.svg";
+import PHPLogo from "../assets/php_logo.svg";
+import LaravelLogo from "../assets/laravel_logo.svg";
 import Image from "next/image";
 
 const SkillsSection: React.FC = () => {
@@ -33,10 +38,28 @@ const SkillsSection: React.FC = () => {
           <Image src={JSLogo} alt="JavaScript" />
         </div>
         <div className={style.ToolContainer}>
-          <Image src={ReactLogo} alt="JavaScript" />
+          <Image src={ReactLogo} alt="React JS" />
         </div>
         <div className={style.ToolContainer}>
-          <Image src={VueLogo} alt="JavaScript" />
+          <Image src={VueLogo} alt="Vue JS" />
+        </div>
+      </div>
+      <h3 className={style.SkillHeader}>Back-end</h3>
+      <div className={style.CategoryContainer}>
+        <div className={style.ToolContainer}>
+          <Image src={NodeJSLogo} alt="Node JS" />
+        </div>
+        <div className={style.ToolContainer}>
+          <Image src={ExprssJSLogo} alt="Express JS" />
+        </div>
+        <div className={style.ToolContainer}>
+          <Image src={MongoDBLogo} alt="MongoDB" />
+        </div>
+        <div className={style.ToolContainer}>
+          <Image src={PHPLogo} alt="PHP" />
+        </div>
+        <div className={style.ToolContainer}>
+          <Image src={LaravelLogo} alt="Laravel" />
         </div>
       </div>
     </div>
