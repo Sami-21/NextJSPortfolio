@@ -1,0 +1,9 @@
+.SocialLinksContainer {
+  display: flex;
+  wdith: 100vw;
+  height: 150px;
+  padding: 0 50px;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 25px;
+}

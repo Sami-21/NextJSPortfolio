@@ -6,6 +6,7 @@ import IntroText from "./IntroText";
 import NavBar from "./NavBar";
 import Noisebackground from "./Noisebackground";
 import SkillsSection from "./SkillsSection";
+import SocialLinks from "./SocialLinks";
 import WorkSection from "./WorkSection";
 
 interface Props {
@@ -31,6 +32,7 @@ const PortfolioContent: React.FC<Props> = ({ showCompDelay }) => {
       <WorkSection />
       <SkillsSection />
       <ContactSection />
+      <SocialLinks />
     </>
   ) : null;
 };

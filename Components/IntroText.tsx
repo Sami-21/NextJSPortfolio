@@ -26,8 +26,12 @@ const IntroText: React.FC = () => {
   }, [isShown]);
   return (
     <div className={style.TextContainer}>
-      {isShown ?
-        <h1 ref={ref} id="introText" className={`${style.IntroText} md:text-base `}>
+      {isShown && (
+        <h1
+          ref={ref}
+          id="introText"
+          className={`${style.IntroText} md:text-base `}
+        >
           {/* First State */}
           <span className={`${style.FirstTextTransition}`}>
             {TextState1.split("")
@@ -141,9 +145,11 @@ const IntroText: React.FC = () => {
                 </span>
               ))}
           </span>
-          <span className={`${style.ThirdTextTransition} ${style.hidden}`}>{Transition3}</span>
-        </h1> : null}
-
+          <span className={`${style.ThirdTextTransition} ${style.hidden}`}>
+            {Transition3}
+          </span>
+        </h1>
+      )}
     </div>
   );
 };

@@ -1,7 +1,7 @@
 .ContentContainer {
   width: 100vw;
   min-height: 750px;
-  padding: 0 50px;
+  padding: 150px 50px 0px 50px;
 }
 
 .TextContainer {
@@ -16,9 +16,21 @@
 
 .ProjectOuterContainer {
   width: 100%;
+  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 50px 0;
+}
+
+@media (max-width: 768px) {
+  .ProjectOuterContainer {
+    height: 600px;
+  }
+}
+@media (max-width: 540px) {
+  .ProjectOuterContainer {
+    height: 750px;
+  }
 }
