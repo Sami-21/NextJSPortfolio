@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Footer from "../Components/Footer";
 import IntroComponents from "../Components/IntroComponents";
 import PortfolioContent from "../Components/PortfolioContent";
 
@@ -22,7 +21,6 @@ const Home: NextPage = () => {
       <div>
         {/* <IntroComponents /> */}
         <PortfolioContent showCompDelay={0} />
-        <Footer />
       </div>
     </>
   );

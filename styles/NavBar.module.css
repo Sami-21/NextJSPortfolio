@@ -38,12 +38,12 @@
 }
 
 .text:nth-child(1) {
-  animation: fade-out 0.1s ease-out 0.5s forwards;
+  animation: fade-out 0.1s ease-out 0.3s forwards;
 }
 
 .text:nth-child(2) {
   opacity: 0;
-  animation: fade-in-out 0.1s ease-out 0.6s forwards;
+  animation: fade-in-out 0.1s ease-out 0.4s forwards;
 }
 
 .text:nth-child(3)::before {
@@ -58,14 +58,14 @@
   position: absolute;
   top: 0;
   left: 0;
-  animation: fade-in 0.1s ease-out 0.7s forwards;
+  animation: fade-in 0.1s ease-out 0.5s forwards;
 }
 
 /* Navigation Items List Container */
 .NavBarItemsContainer {
   position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   width: 70vw;
   height: 150px;
@@ -171,18 +171,18 @@
 }
 
 .NavBarItem:nth-child(1) {
-  animation: fade-out 0.1s ease-out 0.2s forwards;
+  animation: fade-out 0.1s ease-out 0.3s forwards;
 }
 
 .NavBarItem:nth-child(2) {
   opacity: 0;
-  animation: fade-in-out 0.1s ease-out 0.3s forwards;
+  animation: fade-in-out 0.1s ease-out 0.4s forwards;
 }
 
 .NavBarItem:nth-child(3) {
   cursor: pointer;
   opacity: 0;
-  animation: fade-in 0.1s ease-out 0.4s forwards;
+  animation: fade-in 0.1s ease-out 0.5s forwards;
 }
 
 .item {

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useTextTyping from "../hooks/useTextTyping";
 import style from "../styles/IntroText.module.css";
+import Resume from "../assets/react_logo.svg";
 import { useInView } from "react-intersection-observer";
 
 const IntroText: React.FC = () => {
@@ -24,131 +25,152 @@ const IntroText: React.FC = () => {
       clearTimeout(timer);
     };
   }, [isShown]);
+
+  const onButtonClick = (): void => {
+    // using Java Script method to get PDF file
+    fetch("assets/Resume.pdf").then((response) => {
+      console.log(response);
+      response.blob().then((blob) => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob);
+        // Setting various property values
+        let alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = "Resume.pdf";
+        alink.click();
+      });
+    });
+  };
   return (
     <div className={style.TextContainer}>
       {isShown && (
-        <h1
-          ref={ref}
-          id="introText"
-          className={`${style.IntroText} md:text-base `}
-        >
-          {/* First State */}
-          <span className={`${style.FirstTextTransition}`}>
-            {TextState1.split("")
-              .slice(0, 3)
-              .map((char: string, index: number) => {
-                return (
-                  <span key={index} className={style.Disappeared1}>
-                    {char}
-                  </span>
-                );
-              })}
+        <>
+          <h1
+            ref={ref}
+            id="introText"
+            className={`${style.IntroText} md:text-base `}
+          >
+            {/* First State */}
+            <span className={`${style.FirstTextTransition}`}>
+              {TextState1.split("")
+                .slice(0, 3)
+                .map((char: string, index: number) => {
+                  return (
+                    <span key={index} className={style.Disappeared1}>
+                      {char}
+                    </span>
+                  );
+                })}
 
-            {TextState1.split("")
-              .slice(3, 14)
-              .map((char: string, index: number) => {
-                return (
-                  <span key={index} className={style.Disappeared1}>
-                    {char}
-                  </span>
-                );
-              })}
-            <br />
-            {TextState1.split("")
-              .slice(14)
-              .map((char: string, index: number) => {
-                return (
-                  <span key={index} className={style.Disappeared1}>
-                    {char}
-                  </span>
-                );
-              })}
-          </span>
-
-          {/* Second State */}
-          <span className={`${style.SecondTextTransition}  `}>
-            {TextState2.split("")
-              .slice(0, 3)
-              .map((char: string, index: number) => (
-                <span key={index} className={` ${style.Disappeared2}`}>
-                  {char}
-                </span>
-              ))}
-
-            {TextState2.split("")
-              .slice(3, 14)
-              .map((char: string, index: number) => (
-                <span key={index} className={` ${style.Disappeared2}`}>
-                  {char}
-                </span>
-              ))}
-            <span className="xl:block hidden">
+              {TextState1.split("")
+                .slice(3, 14)
+                .map((char: string, index: number) => {
+                  return (
+                    <span key={index} className={style.Disappeared1}>
+                      {char}
+                    </span>
+                  );
+                })}
               <br />
+              {TextState1.split("")
+                .slice(14)
+                .map((char: string, index: number) => {
+                  return (
+                    <span key={index} className={style.Disappeared1}>
+                      {char}
+                    </span>
+                  );
+                })}
             </span>
-            {TextState2.split("")
-              .slice(14)
-              .map((char: string, index: number) => (
-                <span key={index} className={` ${style.Disappeared2}`}>
-                  {char}
-                </span>
-              ))}
-          </span>
 
-          {/* Third State */}
-          <span className={style.ThirdTextTransition}>
-            {TextState3.split("")
-              .slice(0, 3)
-              .map((char: string, index: number) => (
-                <span className={`${style.Showed}  `} key={index}>
-                  {char}
-                </span>
-              ))}
+            {/* Second State */}
+            <span className={`${style.SecondTextTransition}  `}>
+              {TextState2.split("")
+                .slice(0, 3)
+                .map((char: string, index: number) => (
+                  <span key={index} className={` ${style.Disappeared2}`}>
+                    {char}
+                  </span>
+                ))}
 
-            {TextState3.split("")
-              .slice(3, 14)
-              .map((char: string, index: number) => (
-                <span className={`${style.Showed}  `} key={index}>
-                  {char}
-                </span>
-              ))}
-            <br />
-            {TextState3.split("")
-              .slice(14)
-              .map((char: string, index: number) => (
-                <span className={`${style.Showed}  `} key={index}>
-                  {char}
-                </span>
-              ))}
-          </span>
-          {/*Text Blur*/}
-          <span className={style.IntroTextBlur}>
-            {TextState3.split("")
-              .slice(0, 3)
-              .map((char: string, index: number) => (
-                <span className={`${style.Showed}`} key={index}>
-                  {char}
-                </span>
-              ))}
-            {TextState3.split("")
-              .slice(3, 14)
-              .map((char: string, index: number) => (
-                <span className={`${style.Showed}`} key={index}>
-                  {char}
-                </span>
-              ))}
-            <br />
-            {TextState3.split("")
-              .slice(14)
-              .map((char: string, index: number) => (
-                <span className={`${style.Showed}`} key={index}>
-                  {char}
-                </span>
-              ))}
-          </span>
-          <span className={`${style.ThirdTextTransition} ${style.hidden}`}>
-            {Transition3}
-          </span>
-        </h1>
+              {TextState2.split("")
+                .slice(3, 14)
+                .map((char: string, index: number) => (
+                  <span key={index} className={` ${style.Disappeared2}`}>
+                    {char}
+                  </span>
+                ))}
+              <span className="xl:block hidden">
+                <br />
+              </span>
+              {TextState2.split("")
+                .slice(14)
+                .map((char: string, index: number) => (
+                  <span key={index} className={` ${style.Disappeared2}`}>
+                    {char}
+                  </span>
+                ))}
+            </span>
+
+            {/* Third State */}
+            <span className={style.ThirdTextTransition}>
+              {TextState3.split("")
+                .slice(0, 3)
+                .map((char: string, index: number) => (
+                  <span className={`${style.Showed}  `} key={index}>
+                    {char}
+                  </span>
+                ))}
+
+              {TextState3.split("")
+                .slice(3, 14)
+                .map((char: string, index: number) => (
+                  <span className={`${style.Showed}  `} key={index}>
+                    {char}
+                  </span>
+                ))}
+              <br />
+              {TextState3.split("")
+                .slice(14)
+                .map((char: string, index: number) => (
+                  <span className={`${style.Showed}  `} key={index}>
+                    {char}
+                  </span>
+                ))}
+            </span>
+            {/*Text Blur*/}
+            <span className={style.IntroTextBlur}>
+              {TextState3.split("")
+                .slice(0, 3)
+                .map((char: string, index: number) => (
+                  <span className={`${style.Showed}`} key={index}>
+                    {char}
+                  </span>
+                ))}
+              {TextState3.split("")
+                .slice(3, 14)
+                .map((char: string, index: number) => (
+                  <span className={`${style.Showed}`} key={index}>
+                    {char}
+                  </span>
+                ))}
+              <br />
+              {TextState3.split("")
+                .slice(14)
+                .map((char: string, index: number) => (
+                  <span className={`${style.Showed}`} key={index}>
+                    {char}
+                  </span>
+                ))}
+            </span>
+            <span className={`${style.ThirdTextTransition} ${style.hidden}`}>
+              {Transition3}
+            </span>
+          </h1>
+          {/* <button className={style.DownloadResume} onClick={onButtonClick}>
+            {"> "}Download Resume
+          </button> */}
+        </>
       )}
     </div>
   );

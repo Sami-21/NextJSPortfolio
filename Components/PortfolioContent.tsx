@@ -8,6 +8,7 @@ import Noisebackground from "./Noisebackground";
 import SkillsSection from "./SkillsSection";
 import SocialLinks from "./SocialLinks";
 import WorkSection from "./WorkSection";
+import Footer from "../Components/Footer";
 
 interface Props {
   showCompDelay: number;
@@ -33,6 +34,7 @@ const PortfolioContent: React.FC<Props> = ({ showCompDelay }) => {
       <SkillsSection />
       <ContactSection />
       <SocialLinks />
+      <Footer />
     </>
   ) : null;
 };

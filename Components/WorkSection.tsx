@@ -16,52 +16,12 @@ const WorkSection: React.FC = () => {
   const Transition1: string = "Mnut";
   const Transition2: string = "Plwr";
   const Transition3: string = "Work";
-  let projects: project[] = [
+  const projects: project[] = [
     {
-      name: "Project Name",
+      name: "Software Developer at Originova",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      links: [
-        {
-          text: "study case",
-          url: "https://www.youtube.com/watch?v=4wIo7pFpiIc&ab_channel=Skillet",
-        },
-        {
-          text: "visit website",
-          url: "",
-        },
-      ],
-    },
-    {
-      name: "Project Name",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      links: [
-        {
-          text: "study case",
-          url: "https://www.youtube.com/watch?v=4wIo7pFpiIc&ab_channel=Skillet",
-        },
-        {
-          text: "visit website",
-          url: "",
-        },
-      ],
-    },
-
-    {
-      name: "Project Name",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      links: [
-        {
-          text: "study case",
-          url: "https://www.youtube.com/watch?v=4wIo7pFpiIc&ab_channel=Skillet",
-        },
-        {
-          text: "visit website",
-          url: "",
-        },
-      ],
+        "Originova help businesses elevate their value through custom software development, captivating graphic design, Audiovisual in its finest quality, reliable network and security systems.",
+      links: [{ text: "visit website", url: "https://www.originova.net" }],
     },
   ];
   return (
