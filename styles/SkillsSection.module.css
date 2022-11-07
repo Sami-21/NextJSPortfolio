@@ -29,8 +29,9 @@
   width: 150px;
   height: 150px;
 }
-@media screen (max-width: 768px) {
+
+@media (max-width: 449px) {
   .CategoryContainer {
-    gap: 50px;
+    justify-content: center;
   }
 }

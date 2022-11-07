@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Footer from "../Components/Footer";
 import IntroComponents from "../Components/IntroComponents";
 import PortfolioContent from "../Components/PortfolioContent";
 
@@ -18,9 +19,10 @@ const Home: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      <div className=" min-h-screen max-w-screen ">
+      <div>
         {/* <IntroComponents /> */}
         <PortfolioContent showCompDelay={0} />
+        <Footer />
       </div>
     </>
   );

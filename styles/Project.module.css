@@ -13,6 +13,7 @@
   color: #48ff50;
   opacity: 0;
   font-size: 48px;
+  margin-bottom: 25px;
 }
 
 .ProjectTitle::before {
@@ -29,6 +30,7 @@
 .ProjectDescription {
   font-size: 18px;
   opacity: 0;
+  margin-bottom: 25px;
 }
 
 .ProjectLinks {

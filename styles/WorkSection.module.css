@@ -2,7 +2,6 @@
   width: 100vw;
   min-height: 750px;
   padding: 0 50px;
-
 }
 
 .TextContainer {
@@ -17,7 +16,6 @@
 
 .ProjectOuterContainer {
   width: 100%;
-  height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
