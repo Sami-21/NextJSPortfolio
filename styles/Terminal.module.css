@@ -1,0 +1,20 @@
+.input_container input,
+.output_container input {
+  outline: 0;
+  border: 1px solid #48ff50;
+  background: transparent;
+  color: #48ff50;
+  height: 50px;
+  width: 100%;
+  font-size: 32px;
+}
+.path {
+  font-size: 32px;
+  color: #48ff50;
+  min-width: 300px;
+}
+.input_container {
+  display: flex;
+}
+.output_container {
+}
