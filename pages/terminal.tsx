@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import React, { useState } from "react";
 import style from "../styles/Terminal.module.css";
 import Noisebackground from "../Components/Noisebackground";
+import { ReactTerminal } from "react-terminal";
 
 const terminal: NextPage = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -13,10 +14,16 @@ const terminal: NextPage = () => {
       alert(input);
     }
   };
+  const commands = {
+    whoami: "jackharper",
+    cd: (directory: any) => `changed path to ${directory}`,
+  };
+
   return (
     <div className="min-h-screen w-screen p-20">
       <Noisebackground />
-      <div className={style.input_container}>
+      <ReactTerminal commands={commands} theme="dark" />
+      {/* <div className={style.input_container}>
         <label className={style.path} htmlFor="terminal-instructions">
           Sami-Maachi@Portfolio:
         </label>
@@ -30,7 +37,7 @@ const terminal: NextPage = () => {
       </div>
       <div className={style.output_container}>
         <input readOnly type="text" />
-      </div>
+      </div> */}
     </div>
   );
 };

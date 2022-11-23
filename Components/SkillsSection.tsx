@@ -91,7 +91,7 @@ const SkillsSection: React.FC = () => {
       ></CODTextEffect>
       {skillSet.map((expertise: expertise, index: number) => (
         <div key={index}>
-          <h3 className={style.SkillHeader}>{expertise.title}</h3>
+          <h2 className={style.SkillHeader}>{expertise.title}</h2>
           <div className={style.CategoryContainer}>
             {expertise.skills.map((skill: skill, index: number) => (
               <div className={style.ToolContainer} key={index}>
