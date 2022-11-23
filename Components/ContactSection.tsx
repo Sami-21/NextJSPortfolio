@@ -47,6 +47,7 @@ const ContactSection: React.FC = () => {
           id="message"
           placeholder="Your Message here..."
         ></textarea>
+        <input className={style.submit_btn} type="submit" value="send" />
       </div>
     </form>
   );

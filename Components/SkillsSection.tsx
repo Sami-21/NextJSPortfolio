@@ -3,7 +3,9 @@ import CODTextEffect from "./CODTextEffect";
 import style from "../styles/SkillsSection.module.css";
 import HTMLLogo from "../assets/html_logo.svg";
 import CSSLogo from "../assets/css_logo.svg";
+import TailwindCSSLogo from "../assets/tailwind-css_logo.svg";
 import JSLogo from "../assets/js_logo.svg";
+import TSLogo from "../assets/ts_logo.svg";
 import ReactLogo from "../assets/react_logo.svg";
 import VueLogo from "../assets/vue_logo.svg";
 import NodeJSLogo from "../assets/nodejs_logo.svg";
@@ -32,16 +34,16 @@ const SkillsSection: React.FC = () => {
       title: "Front-end",
       skills: [
         {
-          imageAlt: "HTML",
-          image: HTMLLogo,
-        },
-        {
-          imageAlt: "CSS",
-          image: CSSLogo,
+          imageAlt: "Tailwind",
+          image: TailwindCSSLogo,
         },
         {
           imageAlt: "JavaScript",
           image: JSLogo,
+        },
+        {
+          imageAlt: "TypeScript",
+          image: TSLogo,
         },
         {
           imageAlt: "React JS",
