@@ -4,42 +4,45 @@ import style from "../styles/Terminal.module.css";
 import Noisebackground from "../Components/Noisebackground";
 import { ReactTerminal } from "react-terminal";
 
-const terminal: NextPage = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [input, setInput] = useState<String>("");
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [output, setOutput] = useState<String>("");
-  const inputHandler = (e: any): void => {
-    if (e.key === "Enter") {
-      alert(input);
-    }
+const Terminal: NextPage = () => {
+  const homeDirectory: string = "Sami/Portfolio";
+  const [path, setPath] = useState(homeDirectory);
+  const changePath = (destinationPath: string): void => {
+    if (destinationPath != "")
+      setPath((currentPath) => `${currentPath}/${destinationPath}`);
+    else setPath(homeDirectory);
   };
-  const commands = {
+  const commands: object = {
     whoami: "jackharper",
-    cd: (directory: any) => `changed path to ${directory}`,
+    hadouken: "shoryuken",
+    cd: (directory: string) => changePath(directory),
+  };
+
+  const errorMessage = (command: string): string => {
+    return `${command} not found`;
   };
 
   return (
-    <div className="min-h-screen w-screen p-20">
+    <div className=" w-screen p-20 ">
       <Noisebackground />
-      <ReactTerminal commands={commands} theme="dark" />
-      {/* <div className={style.input_container}>
-        <label className={style.path} htmlFor="terminal-instructions">
-          Sami-Maachi@Portfolio:
-        </label>
-        <input
-          type="text"
-          name="terminal-instructions"
-          value={`${input}`}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyDown={(e) => inputHandler(e)}
-        />
-      </div>
-      <div className={style.output_container}>
-        <input readOnly type="text" />
-      </div> */}
+      <ReactTerminal
+        className={style.terminal_container}
+        prompt={`${path}:`}
+        showControlBar={false}
+        commands={commands}
+        errorMessage={errorMessage}
+        themes={{
+          custom_theme: {
+            themeBGColor: "#0000",
+            themeToolbarColor: "#00000000",
+            themeColor: "#00ff41",
+            themePromptColor: "#00ff41",
+          },
+        }}
+        theme="custom_theme"
+      />
     </div>
   );
 };
 
-export default terminal;
+export default Terminal;

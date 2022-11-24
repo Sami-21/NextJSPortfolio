@@ -1,13 +1,13 @@
 .SkillsContainer {
   width: 100vw;
   padding: 150px 50px 0px 50px;
-  color: #48ff50;
+  color: #00ff41;
 }
 .SkillHeader {
   font-size: clamp(40px, 5vw, 50px);
   line-height: 1;
   display: inline-block;
-  color: #48ff50;
+  color: #00ff41;
   z-index: 2;
   letter-spacing: 10px;
   filter: drop-shadow(0 1px 5px);
@@ -21,7 +21,7 @@
   align-items: center;
   padding: 50px 0;
   width: 100%;
-  border-top: 2px dashed #48ff50;
+  border-top: 2px dashed #00ff41;
 }
 .ToolContainer {
   display: flex;

@@ -22,7 +22,7 @@ const NavBar: React.FC = () => {
     setIsActive(navigationState);
   };
 
-  const toggleMenu = (): any => {
+  const toggleMenu = (): void => {
     setIsMenuOpen(!isMenuOpen);
   };
 

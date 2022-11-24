@@ -1,4 +1,5 @@
 .FooterContainer {
+  position: absolute;
   display: flex;
   padding: 25px 0;
   align-items: center;
@@ -6,8 +7,8 @@
   width: 100vw;
   min-height: 5rem;
   background-color: #00090a;
-  color: #48ff50;
+  color: #00ff41;
   font-size: 32px;
   text-align: center;
-  border-top: 2px dashed #48ff50;
+  border-top: 2px dashed #00ff41;
 }

@@ -11,7 +11,7 @@
   width: 100%;
   height: fit-content;
   justify-content: space-between;
-  color: #48ff50;
+  color: #00ff41;
   padding-top: 50px;
 }
 
@@ -54,7 +54,7 @@
 .MyGIFContainer {
   width: 450px;
   height: 450px;
-  background: #48ff50;
+  background: #00ff41;
   border-radius: 50%;
   z-index: 1000;
 }

@@ -45,14 +45,14 @@ const LoadingWidget: React.FC = () => {
             .bit_on {
               position: relative;
               font-size: 120px;
-              color: #48ff50 !important;
+              color: #00ff41 !important;
             }
             .bit_on::after {
               content: "1";
               position: absolute;
               top: 0;
               left: 0;
-              color: #48ff50;
+              color: #00ff41;
               filter: blur(10px);
               font-size: 120px;
             }
@@ -65,14 +65,14 @@ const LoadingWidget: React.FC = () => {
             .bit_on {
               position: relative;
               font-size: 72px;
-              color: #48ff50 !important;
+              color: #00ff41 !important;
             }
             .bit_on::after {
               content: "1";
               position: absolute;
               top: 0;
               left: 0;
-              color: #48ff50;
+              color: #00ff41;
               filter: blur(10px);
               font-size: 72px;
             }
@@ -85,14 +85,14 @@ const LoadingWidget: React.FC = () => {
             .bit_on {
               position: relative;
               font-size: 42px;
-              color: #48ff50 !important;
+              color: #00ff41 !important;
             }
             .bit_on::after {
               content: "1";
               position: absolute;
               top: 0;
               left: 0;
-              color: #48ff50;
+              color: #00ff41;
               filter: blur(10px);
               font-size: 42px;
             }

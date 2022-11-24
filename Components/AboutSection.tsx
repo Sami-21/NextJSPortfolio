@@ -17,7 +17,7 @@ const AboutSection: React.FC = () => {
       ></CODTextEffect>
       <div className={style.TextContainer}>
         <div className={style.Text}>
-          <TextTypingEffect text="Welcome! My name is Sami. a Full Stack Developer with one year of practical experience designing, creating, and implementing solutions utilizing a variety of technologies and coding languages Seeking a challenging career as a Full-stack Developer where I can apply my vast development skills and hands-on technical abilities." />
+          <TextTypingEffect text="Welcome! My name is Sami. a Full Stack Developer with one year of practical experience designing, creating, and implementing solutions utilizing a variety of technologies and coding languages. Seeking a challenging career as a Full-stack Developer where I can apply my vast development skills and hands-on technical abilities." />
         </div>
         <div className={style.GIFContainer}>
           <div className={style.MyGIF}></div>

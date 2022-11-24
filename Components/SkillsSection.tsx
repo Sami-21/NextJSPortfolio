@@ -1,8 +1,6 @@
 import React from "react";
 import CODTextEffect from "./CODTextEffect";
 import style from "../styles/SkillsSection.module.css";
-import HTMLLogo from "../assets/html_logo.svg";
-import CSSLogo from "../assets/css_logo.svg";
 import TailwindCSSLogo from "../assets/tailwind-css_logo.svg";
 import JSLogo from "../assets/js_logo.svg";
 import TSLogo from "../assets/ts_logo.svg";
@@ -14,6 +12,7 @@ import MongoDBLogo from "../assets/mongodb_logo.svg";
 import PHPLogo from "../assets/php_logo.svg";
 import LaravelLogo from "../assets/laravel_logo.svg";
 import Image from "next/image";
+import GlitchedText from "./GlitchedText";
 
 interface skill {
   imageAlt: string;
@@ -91,7 +90,7 @@ const SkillsSection: React.FC = () => {
       ></CODTextEffect>
       {skillSet.map((expertise: expertise, index: number) => (
         <div key={index}>
-          <h2 className={style.SkillHeader}>{expertise.title}</h2>
+          <GlitchedText text={expertise.title} />
           <div className={style.CategoryContainer}>
             {expertise.skills.map((skill: skill, index: number) => (
               <div className={style.ToolContainer} key={index}>
