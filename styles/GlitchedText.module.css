@@ -2,7 +2,7 @@
   font-size: clamp(40px, 5vw, 50px);
   line-height: 1;
   display: inline-block;
-  color: #00ff41;
+  color: #1bff80;
   z-index: 2;
   letter-spacing: 10px;
   filter: drop-shadow(0 1px 3px);
@@ -23,13 +23,13 @@
 .layers::before {
   top: 10px;
   left: 15px;
-  color: #00ff41;
+  color: #1bff80;
 }
 
 .layers::after {
   top: 5px;
   left: -10px;
-  color: #00ff41;
+  color: #1bff80;
 }
 
 .single-path {
@@ -420,31 +420,31 @@
 @keyframes font {
   0% {
     font-weight: 100;
-    color: #00ff41;
+    color: #1bff80;
     filter: blur(3px);
   }
 
   20% {
     font-weight: 500;
-    color: #00ff41;
+    color: #1bff80;
     filter: blur(0);
   }
 
   50% {
     font-weight: 300;
-    color: #00ff41;
+    color: #1bff80;
     filter: blur(2px);
   }
 
   60% {
     font-weight: 700;
-    color: #00ff41;
+    color: #1bff80;
     filter: blur(0);
   }
 
   90% {
     font-weight: 500;
-    color: #00ff41;
+    color: #1bff80;
     filter: blur(6px);
   }
 }

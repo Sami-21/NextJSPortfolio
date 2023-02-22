@@ -35,8 +35,8 @@ const Terminal: NextPage = () => {
           custom_theme: {
             themeBGColor: "#0000",
             themeToolbarColor: "#00000000",
-            themeColor: "#00ff41",
-            themePromptColor: "#00ff41",
+            themeColor: "#1BFF80",
+            themePromptColor: "#1BFF80",
           },
         }}
         theme="custom_theme"

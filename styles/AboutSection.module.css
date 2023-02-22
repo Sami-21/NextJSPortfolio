@@ -11,7 +11,7 @@
   width: 100%;
   height: fit-content;
   justify-content: space-between;
-  color: #00ff41;
+  color: #1bff80;
   padding-top: 50px;
 }
 
@@ -41,7 +41,7 @@
 
 .MyGIF::after {
   content: "";
-  background-color: #48ff51;
+  background-color: #1bff80;
   position: absolute;
   top: 0;
   left: 0;
@@ -54,7 +54,7 @@
 .MyGIFContainer {
   width: 450px;
   height: 450px;
-  background: #00ff41;
+  background: #1bff80;
   border-radius: 50%;
   z-index: 1000;
 }
